@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Columns</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 1.25rem;
+        color: #333;
+        margin: 0;
+      }
+
+      .grid {
+        list-style: none;
+        padding-left: 0;
+
+        max-width: 60rem;
+        margin: 1rem auto;
+
+        display: grid;
+        /* grid-template-columns: 30% 30% 40%; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .item {
+        background-color: #ddd;
+        padding: 0.5rem;
+        text-align: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="grid">
+      <li class="item">Gon</li>
+      <li class="item">Killua</li>
+      <li class="item">Kurapika</li>
+      <li class="item">Hisoka</li>
+      <li class="item">Leorio</li>
+      <li class="item">Gen</li>
+      <li class="item">Netero</li>
+      <li class="item">Illumi</li>
+      <li class="item">Fetan</li>
+    </ul>
+  </body>
+</html>
