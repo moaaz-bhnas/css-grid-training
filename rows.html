@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Columns</title>
+    <title>Rows</title>
 
     <style>
       * {
@@ -26,9 +26,20 @@
         margin: 1rem auto;
 
         display: grid;
-        grid-template-columns: 30% 30% 40%;
-        grid-template-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
+
+        /* هيقص المحتوى لو أكبر من الارتفاع المحدد */
+        grid-auto-rows: 5rem;
+
+        /* أقل حاجة 5، بس لو المحتوى أكبر خليه تلقائي براحته */
+        grid-auto-rows: minmax(5rem, auto);
+
+        /* 
+        - طبعاً دة بتغني عن اللي قبلها
+        - أغلب الأوقات مش بنحتاج الخاصية دة. بيكون تحديد العمدان كافي 
+        - والمحتوى بعدها ياخد صفوف زي ما يحب
+        */
+        grid-template-columns: repeat(3, minmax(5rem, auto));
       }
 
       .item {
